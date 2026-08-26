@@ -1,40 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+.form-box {
+max-width: 600px;
+margin: 50px auto;
+padding: 30px;
+background-color: #e8fff9;
+border-radius: 16px;
+text-align: left;
+box-shadow: 0 5px 15px rgba(74, 44, 42, 0.15);
+}
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Submit a Rule</title>
-
-<style>
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-background-color: #fff8e7;
-color: #4a2c2a;
+.form-box h2,
+.form-box p {
 text-align: center;
 }
 
-header {
-background-color: #4a2c2a;
-color: #b8f2e6;
-padding: 20px;
+label {
+display: block;
+margin-top: 18px;
+font-weight: bold;
 }
 
-header h1 {
-margin: 0;
-font-size: 36px;
-letter-spacing: 2px;
+textarea,
+input,
+select {
+width: 100%;
+padding: 12px;
+margin-top: 8px;
+border-radius: 8px;
+border: 2px solid #b8f2e6;
+box-sizing: border-box;
+font-size: 16px;
 }
 
-nav {
-margin-top: 15px;
+textarea {
+min-height: 110px;
 }
 
-nav a {
-color: #fff8e7;
-text-decoration: none;
+button {
+display: block;
+margin: 25px auto 0;
 background-color: #4a2c2a;
 color: #b8f2e6;
 border: none;
@@ -43,31 +46,87 @@ font-size: 16px;
 border-radius: 10px;
 cursor: pointer;
 }
-
-button:hover {
-background-color: #6b403d;
-}
-
-.tip {
-margin-top: 25px;
-padding: 15px;
-background-color: #fff8e7;
-border-radius: 10px;
-font-size: 14px;
-}
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <h1>UNSPOKEN RULES</h1>
 
 <nav>
 <a href="index.html">Home</a>
-</div>
+<a href="rules.html">View Rules</a>
+<a href="submit.html">Submit a Rule</a>
+</nav>
+</header>
+
+<div class="form-box">
+
+<h2>Submit an Unspoken Rule</h2>
+
+<p>
+Know one of those rules nobody explains,
+but somehow everyone is expected to know?
+Add it here.
+</p>
+
+<form>
+
+<label for="rule">What is the unspoken rule?</label>
+<textarea
+id="rule"
+name="rule"
+placeholder="Example: If someone shows you one photo on their phone, don't start swiping through the rest."
+></textarea>
+
+<label for="why">Why does this rule exist?</label>
+<textarea
+id="why"
+name="why"
+placeholder="Example: Their other photos may be private."
+></textarea>
+
+<label for="when">When does this rule apply?</label>
+<textarea
+id="when"
+name="when"
+placeholder="Example: When someone hands you their phone to show you one picture."
+></textarea>
+
+<label for="instead">What should someone do instead?</label>
+<textarea
+id="instead"
+name="instead"
+placeholder="Example: Give the phone back or ask before looking at another picture."
+></textarea>
+
+<label for="category">Category</label>
+
+<select id="category" name="category">
+<option>Everyday Life</option>
+<option>Friendships</option>
+<option>School</option>
+<option>Work</option>
+<option>Dating</option>
+<option>Texting</option>
+<option>Driving</option>
+<option>Family</option>
+<option>Public Places</option>
+</select>
+
+<label for="name">Name or nickname</label>
+
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Optional"
+>
+
+<button type="submit">Submit Rule</button>
+
+</form>
 
 </div>
 
